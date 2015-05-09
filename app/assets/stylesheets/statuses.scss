@@ -1,0 +1,20 @@
+.meta {
+	border-bottom: solid 1px #CCC;
+	padding: 5px 0px;
+}
+.meta p {
+	margin: 4px 0;
+}
+.meta.hover
+{
+	background: #FAFAFA;
+	}
+
+.meta .admin 
+{
+	display: none;
+}
+.meta.hover .admin{
+	
+	display: inline;
+}

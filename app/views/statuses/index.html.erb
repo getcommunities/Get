@@ -1,0 +1,21 @@
+<div class="page-header">
+  <h1> All of the Statuses </h1>
+</div>
+
+<div class="container">
+<center><%= link_to "Post  a New Status" , new_status_path, Class: "btn btn-default dropdown-toggle"%></center>
+  <% @statuses.each do |status| %>
+    <div class="status">
+    <b><%= status.user.first_name %> </b></br>
+      <p> <%= status.content %> </p>
+      <div class="meta">
+        <%= link_to time_ago_in_words(status.created_at) +" ago" , status %>
+        <span class="admin">
+        |  <%= link_to "show",status %> 
+        | <%= link_to "Edit",edit_status_path(status) %> | 
+         <%= link_to "Delete", status, method: :delete , data: { Confirm: "Are You Sure you delete the status" }%>
+       </span>
+     </div>
+  </div>
+  <% end %>
+</div>

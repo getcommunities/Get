@@ -1,0 +1,32 @@
+<div class="raw">
+  <div class="span4">
+     <div class="well">
+    <legend>Sign Up</legend>
+<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+  <div> <%= f.input :first_name %>  </div>
+   <div> <%= f.input :last_name %> </div>
+    <div>  <%= f.input :profile_name %>  </div>
+  <div class="field">
+    <%= f.input :email, autofocus: true %>
+  </div>
+
+  <div class="field">
+      <% if @validatable %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.input :password, autocomplete: "off" %>
+  </div>
+  <div class="field">
+      <%= f.input :password_confirmation, autocomplete: "off" %>
+  </div>
+  <div class="actions">
+    <%= f.button :submit, "Sign up" %>
+  </div>
+   </div>
+</div>
+
+<%= render "devise/shared/links" %>
+</div>
+<% end %>
+
