@@ -17,6 +17,7 @@ gem 'devise'
 gem 'simple_form'
 gem 'polymer-core-rails'
 gem 'polymer-paper-rails'
+gem  'make_flaggable', :git => 'git://github.com/cavneb/make_flaggable.git'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks

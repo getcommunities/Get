@@ -1,0 +1,17 @@
+<%= simple_form_for([@status, @comment]) do |f| %>
+  <div class="field">
+    <%= f.input :content %>
+  </div>
+
+  <div class="field">
+    <%= f.input :user_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :status_id %><br>
+    <%= f.number_field :status_id %>
+  </div>
+  <div class="actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
